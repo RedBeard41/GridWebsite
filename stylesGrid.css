@@ -1,19 +1,21 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 
 
 }
 /* Identifying containers for doing grid */
-body > * {
+/* body > * {
  margin: 1vmin;
  padding: 1vmin;
  background-color: gray;
 }
 
 header nav ul>*{
-
+  margin: 1vmin;
+  padding: 1vmin;
+  background-color: orange;
 }
 
 .grid > * {
@@ -29,13 +31,13 @@ header nav ul>*{
 }
 
 .introduction >  div {
-
+  margin: 1vmin;
   padding: 1vmin;
   background-color: lightgreen;
 }
 
 .intro-left > * {
-  /* margin: 1vmin; */
+  margin: 1vmin;
   padding: 1vmin;
   background-color: pink;
 }
@@ -44,6 +46,83 @@ header nav ul>*{
   margin: 1vmin;
   padding: 1vmin;
   background-color: red;
+} */
+
+body {
+  margin: 1vmin;
+}
+/* Setting up Grid system for header, main, footer */
+.grid {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(1fr,auto));
+  grid-gap: 1vmin;
+}
+
+/* Setting up Grid System for nav links */
+.grid header nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1vmin;
+  list-style: none;
+}
+
+/*  setting up grid for introduction section*/
+.introduction {
+  display: grid;
+  grid-template-columns: minmax(auto,1fr) 2fr;
+  grid-gap: 1vmin;
+  margin-bottom: 1vmin;
+}
+
+/* setting up grid for info section */
+.info {
+  display: grid ;
+  grid-template-columns: repeat(3, minmax(auto,1fr));
+  grid-gap: 1vmin;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: darkgray;
+  color: white;
+  padding: 1vmin;
+  box-shadow: 5px 5px 10px darkgray;
+
+
+}
+
+nav ul li a:hover {
+  color: black;
+  background-color: white;
+  box-shadow: 5px 5px 10px darkgray;
+}
+
+ .introduction .intro-left {
+  background-color: lightgray;
+  padding: 1vmin;
+  box-shadow: 5px 5px 10px darkgray;
+}
+
+.introduction .intro-right {
+  background-color: lightgray;
+  padding: 1vmin;
+  box-shadow: 5px 5px 10px darkgray;
+}
+
+.info article {
+  background-color: lightgray;
+  box-shadow: 5px 5px 10px darkgray;
+}
+
+.info article > * {
+  padding: 1vmin;
+}
+
+footer {
+  text-align: center;
 }
 
 img {
